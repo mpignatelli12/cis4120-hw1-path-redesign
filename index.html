@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Path@Penn – Search & Filter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="phone" role="main">
+    <!-- Penn header -->
+    <header class="penn-header" role="banner">
+        <img class="penn-mark" src="assets/penn-logo.png" alt="Penn" />
+        <div class="welcome">Welcome, <strong>Michael</strong></div>
+    </header>
+
+    <!-- Red title bar -->
+    <section class="title-bar" aria-label="Section">
+        <h1>Search &amp; Filter</h1>
+    </section>
+
+    <!-- Scrollable content -->
+    <div class="content-scroll">
+
+        <!-- Controls -->
+        <section class="controls" aria-label="Search controls">
+            <div class="controls-inner">
+                <button class="btn btn-ghost" type="button">
+                    <span class="icon" aria-hidden="true">🔎</span><span>Search</span>
+                </button>
+                <button class="btn btn-gold" type="button">
+                    <span class="icon" aria-hidden="true">🧪</span><span>Filter</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Attribute search field -->
+        <section class="attr-search">
+            <label class="search-input" aria-label="Search your attributes">
+                <span class="icon-left" aria-hidden="true">≡</span>
+                <input type="text" placeholder="Search your attributes" inputmode="search" />
+                <span class="icon-right" aria-hidden="true">🔍</span>
+            </label>
+        </section>
+
+        <!-- Collapsible requirement groups -->
+        <section class="groups">
+
+            <!-- BSE -->
+            <section class="group-collapsible" aria-label="BSE">
+                <button class="group-header" aria-expanded="false">
+                    <span class="group-title">BSE</span>
+                    <span class="chev" aria-hidden="true">›</span>
+                </button>
+                <div class="group-body">
+                    <div class="chips" role="list">
+                        <span class="chip chip-done" role="listitem">Writing ✓</span>
+                        <span class="chip" role="listitem">SSH</span>
+                        <span class="chip" role="listitem">Ethics</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Major in CS -->
+            <section class="group-collapsible is-open" aria-label="Major in Computer Science">
+                <button class="group-header" aria-expanded="true">
+                    <span class="group-title">Major in Computer Science</span>
+                    <span class="chev" aria-hidden="true">›</span>
+                </button>
+                <div class="group-body">
+                    <div class="chips" role="list">
+                        <span class="chip chip-done" role="listitem">Math &amp; Natural Science ✓</span>
+                        <span class="chip chip-done" role="listitem">CIS Req. ✓</span>
+                        <span class="chip chip-active" role="listitem">Tech Elective</span>
+                        <span class="chip" role="listitem">CIS Elective</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Major in CogSci -->
+            <section class="group-collapsible is-open" aria-label="Major in Cognitive Science">
+                <button class="group-header" aria-expanded="true">
+                    <span class="group-title">Major in Cognitive Science</span>
+                    <span class="chev" aria-hidden="true">›</span>
+                </button>
+                <div class="group-body">
+                    <div class="chips" role="list">
+                        <span class="chip chip-done" role="listitem">Core Req. ✓</span>
+                        <span class="chip" role="listitem">Breadth</span>
+                        <span class="chip chip-active" role="listitem">Conc. Elective</span>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- Course list preview -->
+        <section class="course-list" aria-label="Course results">
+            <article class="course">
+                <header class="course-top">
+                    <div>
+                        <div class="code">PSYC 1310</div>
+                        <div class="title">Language &amp; Thought</div>
+                    </div>
+                    <div class="instructor">Trueswell/Laver</div>
+                </header>
+                <div class="meta">101 · TR 12:00 - 1:30</div>
+                <div class="state state-allowed">
+                    <span class="state-text">✅ You may register</span>
+                </div>
+            </article>
+
+            <article class="course">
+                <header class="course-top">
+                    <div>
+                        <div class="code">BIOL 4536</div>
+                        <div class="title">Intro to Computation Biology</div>
+                    </div>
+                    <div class="instructor">Kim/Mathieson</div>
+                </header>
+                <div class="meta">401 · MW 3:30 – 5:00</div>
+                <div class="state state-perm">
+                    <span class="state-text">⚠️ Must Request Permission</span>
+                </div>
+            </article>
+
+            <article class="course">
+                <header class="course-top">
+                    <div>
+                        <div class="code">CIS 4120</div>
+                        <div class="title">Human–Computer Interaction</div>
+                    </div>
+                    <div class="instructor">Head/Shi</div>
+                </header>
+                <div class="meta">401 · MW 1:45 – 3:15</div>
+                <div class="state state-full">
+                    <span class="state-text">⏳ Course Full</span>
+                    <button class="alert-btn" type="button">Set Alert 🔔</button>
+                </div>
+            </article>
+
+            <article class="course">
+                <header class="course-top">
+                    <div>
+                        <div class="code">CIS 5300</div>
+                        <div class="title">Natural Language Processing</div>
+                    </div>
+                    <div class="instructor">Callison-Burch, C.</div>
+                </header>
+                <div class="meta">501 · TBA – Online</div>
+                <div class="state state-blocked">
+                    <span class="state-text">❌ Cannot Register (Online-Only)</span>
+                </div>
+            </article>
+        </section>
+
+    </div>
+    <!-- Scrollable content END -->
+
+    <!-- Bottom tab bar (pinned) -->
+    <nav class="tabbar" aria-label="Primary">
+        <a class="tab active" href="#" aria-current="page">🏠<span>Home</span></a>
+        <a class="tab" href="#">🧭<span>Explore</span></a>
+        <a class="tab" href="#">🛒<span>Cart</span></a>
+        <a class="tab" href="#">🔔<span>Alerts</span></a>
+        <a class="tab" href="#">🎓<span>Profile</span></a>
+    </nav>
+</main>
+</body>
+</html>
